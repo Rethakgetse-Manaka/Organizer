@@ -22,11 +22,15 @@ class FileOrganizerHandler(FileSystemEventHandler):
         dest = os.path.join(destination_path, filename)
         shutil.move(src, dest)
 
-folder_to_track = '/path/to/Downloads'  # Replace with your actual Downloads folder path
+folder_to_track = os.path.expanduser('~/Downloads')  # This sets the Downloads folder for the current user
 extension_to_folder = {
     'jpg': 'Images', 'jpeg': 'Images', 'png': 'Images', 'gif': 'Images',
     'pdf': 'Documents', 'docx': 'Documents', 'xlsx': 'Documents', 'txt': 'Documents',
-    'mp4': 'Videos', 'mkv': 'Videos', 'mov': 'Videos'
+    'mp4': 'Videos', 'mkv': 'Videos', 'mov': 'Videos', 'avi': 'Videos',
+    'mp3': 'Music', 'wav': 'Music', 'flac': 'Music', 'm4a': 'Music',
+    'zip': 'Compressed', 'rar': 'Compressed', '7z': 'Compressed', 'tar': 'Compressed',
+    'exe': 'Programs', 'msi': 'Programs', 'deb': 'Programs', 'pkg': 'Programs',
+    '': 'Others'
 }
 
 event_handler = FileOrganizerHandler()
