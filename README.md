@@ -1,0 +1,1 @@
+Organizer is a Python-based tool designed to streamline the organization of your Downloads folder. It categorizes, moves, and manages files effortlessly based on custom rules and criteria. With its intuitive interface and robust functionality, Organizer keeps your Downloads folder clutter-free and highly efficient.
